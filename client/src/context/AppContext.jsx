@@ -45,7 +45,7 @@ const AppContextProvider = (props) => {
     }
 
     useEffect(() => {
-        getDashboardData();
+        // getDashboardData();
     }, [])
 
     useEffect(() => {
