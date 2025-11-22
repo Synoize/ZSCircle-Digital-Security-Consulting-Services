@@ -17,9 +17,9 @@ const OnboardingScreen = () => {
             <Top/>
             <Solutions/>
             <About/>
-            <Services/>
-            <Resources/>
-            <Blogs/>
+            {/* <Services/> */}
+            {/* <Resources/> */}
+            {/* <Blogs/> */}
             <FAQ/>
         </div>
     );
