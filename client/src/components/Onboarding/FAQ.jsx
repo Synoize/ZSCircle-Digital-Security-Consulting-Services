@@ -5,51 +5,65 @@ import { useAppContext } from "../../context/AppContext";
 const FAQ = () => {
   const { navigate } = useAppContext();
 
-  const faqs = [
-    {
-      question: "What is the main objective of this project?",
-      answer: `The main goal of this project is to automatically detect and classify brain tumors from MRI images using deep learning. 
-      By leveraging Convolutional Neural Networks (CNNs) and transfer learning (VGG16), the system can accurately predict whether a brain MRI scan contains a tumor and identify its type (e.g., Glioma, Meningioma, Pituitary, or No Tumor).`,
-    },
-    {
-      question: "Which technologies and libraries are used in this project?",
-      answer: `The project uses Python as the main programming language with the following frameworks and libraries:`,
-      list: [
-        "TensorFlow / Keras: Deep learning model building",
-        "NumPy & Pandas: Data processing",
-        "PIL: Image preprocessing",
-        "Matplotlib: Visualization",
-        "Scikit-learn: Evaluation metrics and confusion matrix",
-        "Google Colab: Training environment with GPU support",
-      ],
-    },
-    {
-      question: "What dataset was used to train the model?",
-      answer: `We used the Brain MRI Dataset available on Kaggle, which contains labeled MRI images under four categories:`,
-      list: [
-        "Glioma Tumor",
-        "Meningioma Tumor",
-        "Pituitary Tumor",
-        "No Tumor",
-      ],
-    },
-    {
-      question: "How does the model work?",
-      answer: "The system follows these steps:",
-      list: [
-        "Data Preprocessing: MRI images are resized, normalized, and augmented.",
-        "Feature Extraction: The pre-trained VGG16 model extracts key visual patterns from images.",
-        "Classification: Fully connected layers analyze these patterns to classify tumor types.",
-        "Prediction: The model predicts the tumor class with a confidence score.",
-      ],
-    },
-    {
-      question: "What is Transfer Learning, and why is it used here?",
-      answer: `Transfer Learning allows us to use a pre-trained model (like VGG16 trained on ImageNet) and fine-tune it for a specific task — in this case, brain tumor classification. 
-      This saves training time, requires fewer data, and improves accuracy since the base model already understands fundamental image features.`,
-      highlight: true,
-    },
-  ];
+ const faqs = [
+  {
+    question: "What services does ZSCircle provide?",
+    answer: `ZSCircle offers complete digital solutions for startups, businesses, and individuals. 
+    Our services cover everything from designing digital experiences to developing full-scale products.`,
+    list: [
+      "Web Development",
+      "App Development (Android, iOS, Hybrid)",
+      "UI/UX Design",
+      "Branding & Creative Services",
+      "Digital Marketing",
+      "Cybersecurity Solutions",
+      "Cloud & Deployment Services",
+      "Custom Software Development",
+    ],
+  },
+  {
+    question: "What technologies does ZSCircle use?",
+    answer: `We work with modern and industry-standard technologies to ensure fast, scalable, and secure solutions.`,
+    list: [
+      "React, Next.js, Vue.js (Frontend Development)",
+      "Node.js, Express.js, PHP, Laravel (Backend Development)",
+      "MongoDB, MySQL, PostgreSQL (Databases)",
+      "React Native & Flutter (Mobile App Development)",
+      "Figma & Adobe XD (UI/UX Design)",
+      "AWS, Google Cloud, DigitalOcean (Cloud Hosting)",
+      "Docker, GitHub, CI/CD (DevOps & Deployment)",
+    ],
+  },
+  {
+    question: "Who can benefit from ZSCircle’s services?",
+    answer: `We work with clients across various domains, helping them build, scale, and secure their digital presence.`,
+    list: [
+      "Startups looking to launch digital products",
+      "Businesses needing modern websites or apps",
+      "Individuals wanting portfolio or personal platforms",
+      "Enterprises seeking custom software or cloud solutions",
+      "Brands needing UI/UX, marketing, or identity design",
+    ],
+  },
+  {
+    question: "Why choose ZSCircle for your digital project?",
+    answer: "Here’s what makes us a reliable and growth-focused digital partner:",
+    list: [
+      "End-to-End Digital Solutions under one roof",
+      "Startup-friendly, scalable development approach",
+      "Security-first product building",
+      "On-time delivery with transparent communication",
+      "Modern tech stack and industry best practices",
+      "Dedicated post-launch support & maintenance",
+    ],
+  },
+  {
+    question: "How can we get started with ZSCircle?",
+    answer: `Contact us with your idea or requirements. 
+    We will discuss your goals, create a project plan, share a quotation, and start development once approved.`,
+    highlight: true,
+  },
+];
 
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -64,8 +78,7 @@ const FAQ = () => {
           Frequently Asked Questions
         </h3>
         <h1 className="text-2xl md:text-5xl max-w-4xl mx-auto font-light mt-4 px-4 leading-snug">
-          Commonly asked questions about the model — project’s purpose, working,
-          tech stack, and applications.
+          Commonly asked questions about the services we provide at ZSCircle.
         </h1>
       </div>
 

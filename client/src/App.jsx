@@ -10,8 +10,7 @@ import Home from './pages/Home';
 import Login from './components/Login';
 import AboutUs from './pages/AboutUs';
 import ContactPage from './pages/ContactPage';
-import ViewDocument from './pages/ViewDocument';
-import ToolsLayout from './pages/Tools/ToolsLayout';
+
 import AdminLogin from './components/Admin/AdminLogin';
 import AdminDocuments from './pages/Admin/AdminDocuments';
 import AdminContacts from './pages/Admin/AdminContacts';
@@ -19,12 +18,10 @@ import AdminList from './pages/Admin/AdminList';
 import AdminUsers from './pages/Admin/AdminUsers';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import AdminLayout from './pages/Admin/AdminLayout';
-import CaseStudiesPage from './pages/CaseStudiesPage';
-import MyReports from './pages/MyReports';
-import UploadMRIReport from './pages/Tools/UploadMRIReport';
 import { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import ChatBot from './components/ChatBot';
+import ServicesPage from './pages/ServicesPage';
 
 const App = () => {
   const isAdminPath = useLocation().pathname.includes("admin");
@@ -42,17 +39,18 @@ const App = () => {
         <Routes>
           <Route path='*' element={<ErrorPage />} />
           <Route path='/' element={<Home />} />
-          <Route path='/my-reports' element={<MyReports />} />
-          <Route path='/my-reports/:id' element={<ViewDocument />} />
-          <Route path='/tools' element={<ToolsLayout />} />
-          <Route path='/tools' >
-            <Route path='brain-tumor-detection' element={<UploadMRIReport />} />
-            <Route path='image-preprocessing' element={<div className='h-screen text-center text-xl mt-60 md:mt-80'>Working on Tool...</div>} />
-            <Route path='report-generation' element={<div className='h-screen text-center text-xl mt-60 md:mt-80'>Working on Tool...</div>} />
-          </Route>
+
+          <Route path='/services' element={<ServicesPage/>} />
+          <Route path='/projects' element={<></>} />
           <Route path='/about-us' element={<AboutUs />} />
-          <Route path='/case-studies' element={<CaseStudiesPage />} />
+          <Route path='/blogs' element={<></>} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='/profile' element={<></>} />
+
+          <Route path='/dashboard' element={<></>} />
+          <Route path='/courses' element={<></>} >
+            <Route path='ui-ux-designing' element={<></>} />
+          </Route>
 
           {/* Admin */}
           <Route path='/admin' element={showAdminLogin ? <AdminLogin /> : <AdminLayout />}>

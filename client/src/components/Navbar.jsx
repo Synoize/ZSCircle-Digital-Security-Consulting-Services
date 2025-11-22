@@ -22,9 +22,10 @@ const Navbar = () => {
 
             <div className="hidden sm:flex items-center gap-8 text-nowrap">
                 <NavLink to="/" style={getActivePage}>Home</NavLink>
-                <NavLink to="/tools" style={getActivePage}>Tools</NavLink>
+                <NavLink to="/services" style={getActivePage}>Services</NavLink>
+                <NavLink to="/projects" style={getActivePage}>Projects</NavLink>
                 <NavLink to="/about-us" style={getActivePage}>About Us</NavLink>
-                <NavLink to="/case-studies" style={getActivePage}>Case Studies</NavLink>
+                <NavLink to="/blogs" style={getActivePage}>Blogs</NavLink>
                 <NavLink to="/contact" style={getActivePage}>Contact</NavLink>
             </div>
             {
@@ -34,11 +35,11 @@ const Navbar = () => {
                     </button>
                 ) : (
                     <div className="relative group">
-                        <img src={assets.profile_icon} alt="" width={40} />
+                        <img src={assets.profile_icon} alt="Profile" width={40} onClick={() => navigate("/profile")} />
 
                         <div className="hidden group-hover:block absolute top-0 right-0 py-10 z-40">
                             <ul className=" shadow bg-white border border-gray-200  w-30 rounded-md text-sm">
-                                <li onClick={() => navigate("/my-reports")} className="p-1.5 pl-3 hover:bg-special-red/10 cursor-pointer">My Reports</li>
+                                <li onClick={() => navigate("/dashboard")} className="p-1.5 pl-3 hover:bg-special-red/10 cursor-pointer">Dashboard</li>
                                 <li onClick={() => { setShowConfirm(true) }} className="p-1.5 pl-3 hover:bg-special-red/10 text-special-red cursor-pointer">Logout</li>
                             </ul>
                         </div>
@@ -59,12 +60,11 @@ const Navbar = () => {
             {open && (
                 <div className={`${open ? 'flex' : 'hidden'} fixed top-18 left-0 w-full h-screen bg-white/60 backdrop-blur-xl py-6 flex-col items-center gap-6 px-5 md:hidden z-50 border-t border-gray-300`}>
                     <NavLink to="/" onClick={() => setOpen(false)} style={getActivePage} >Home</NavLink>
-                    <NavLink to="/my-reports" onClick={() => setOpen(false)} style={getActivePage} >My Reports</NavLink>
-                    <NavLink to="/tools" onClick={() => setOpen(false)} style={getActivePage} >Tools</NavLink>
+                    <NavLink to="/services" onClick={() => setOpen(false)} style={getActivePage} >Services</NavLink>
+                    <NavLink to="/projects" onClick={() => setOpen(false)} style={getActivePage} >Projects</NavLink>
                     <NavLink to="/about-us" onClick={() => setOpen(false)} style={getActivePage} >About Us</NavLink>
-                    <NavLink to="/case-studies" onClick={() => setOpen(false)} style={getActivePage}>Case Studies</NavLink>
+                    <NavLink to="/blogs" onClick={() => setOpen(false)} style={getActivePage}>Blogs</NavLink>
                     <NavLink to="/contact" onClick={() => setOpen(false)} style={getActivePage} >Contact</NavLink>
-
                     {
                         user && (
                             <button onClick={() => { setOpen(false); setShowConfirm(true) }} className="cursor-pointer px-6 py-2 mt-2 bg-special-red/90 hover:bg-special-red transition text-white rounded-full text-sm">

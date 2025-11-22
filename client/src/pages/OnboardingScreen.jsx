@@ -4,12 +4,10 @@ import { useAppContext } from '../context/AppContext';
 import Top from '../components/Onboarding/Top';
 import Solutions from '../components/Onboarding/Solutions';
 import About from '../components/Onboarding/About';
-import Industries from '../components/Onboarding/Industries';
 import Resources from '../components/Onboarding/Resources';
-import CaseStudies from '../components/Onboarding/CaseStudies';
 import Blogs from '../components/Onboarding/Blogs';
 import FAQ from '../components/Onboarding/FAQ';
-import RequestDonation from '../components/Onboarding/RequestDonation';
+import Services from '../components/Onboarding/Services';
 
 const OnboardingScreen = () => {
 
@@ -19,12 +17,10 @@ const OnboardingScreen = () => {
             <Top/>
             <Solutions/>
             <About/>
-            <Industries/>
-            <CaseStudies/>
+            <Services/>
             <Resources/>
             <Blogs/>
             <FAQ/>
-            <RequestDonation/>
         </div>
     );
 };
