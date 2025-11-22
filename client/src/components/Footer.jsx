@@ -1,7 +1,7 @@
 import { Github, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import React from "react";
 import { assets } from "../assets/assets";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -16,20 +16,19 @@ const Footer = () => {
                             <img src={assets.logo} alt="tumor" className="h-12 w-auto" />
                         </Link>
                         <h2 className="text-2xl font-light leading-snug">
-                            Tumor the AI-powered System
+                            ZSCircle The Agency
                             <br />
-                            designed to assist radiologists and medical professionals in
-                            achieving faster, more reliable diagnoses, reducing human error, and improving patient outcomes.
+                            Provide Next-Gen Saleable Digital Security Solution for Startup’s & Individuals
                         </h2>
                     </div>
                     <div className="space-y-3">
                         <div className="font-medium leading-snug">
                             <h2>Address:</h2>
-                            <p className="font-light">Saharsa, Bihar, India</p>
+                            <p className="font-light">Bhilai, CG</p>
                         </div>
                         <div className="font-medium leading-snug">
                             <h2>Email:</h2>
-                            <p className="font-light">shivamsingh.dev0@gmail.com</p>
+                            <p className="font-light">business.zscircle@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -37,15 +36,16 @@ const Footer = () => {
                 {/* Center Navigation */}
                 <div className="flex flex-wrap gap-x-10 gap-y-2 text-xl font-light">
                     <div className="flex flex-col space-y-1">
-                        <a href="/" className="hover:underline">Home</a>
-                        <a href="./pages/about.html" className="hover:underline">About</a>
-                        <a href="./pages/tools.html" className="hover:underline">Tools</a>
-                        <a href="./pages/case-studies.html" className="hover:underline">Case Studies</a>
-                        <a href="./pages/resources.html" className="hover:underline">Resources</a>
+                        <NavLink to="/" className="hover:underline">Home</NavLink>
+                        <NavLink to="/about-us" className="hover:underline">About Us</NavLink>
+                        <NavLink to="/services" className="hover:underline">Services</NavLink>
+                        <NavLink to="/projects" className="hover:underline">Projects</NavLink>
+                        <NavLink to="/career" className="hover:underline">Career</NavLink>
+                        <NavLink to="/contact" className="hover:underline">Contact</NavLink>
                     </div>
                     <div className="flex flex-col space-y-1">
-                        <a href="./pages/blogs.html" className="hover:underline">Blogs</a>
-                        <a href="./pages/subscribe.html" className="hover:underline">Subscribe</a>
+                        <NavLink to="/blogs" className="hover:underline">Blogs</NavLink>
+                        <NavLink to="/subscribe" className="hover:underline">Subscribe</NavLink>
                     </div>
                 </div>
 
@@ -62,10 +62,10 @@ const Footer = () => {
                         <a href="https://x.com/synoize" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" className="transform transition-transform duration-300 ease-in-out hover:scale-110">
                             <Twitter size={24} />
                         </a>
-                        <a href="https://instagram.com/synoize" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transform transition-transform duration-300 ease-in-out hover:scale-110">
+                        <a href="https://instagram.com/zscircle" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transform transition-transform duration-300 ease-in-out hover:scale-110">
                             <Instagram size={24} />
                         </a>
-                        <a href="https://youtube.com/synoize" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transform transition-transform duration-300 ease-in-out hover:scale-110">
+                        <a href="https://youtube.com/zscircle" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transform transition-transform duration-300 ease-in-out hover:scale-110">
                             <Youtube size={24} />
                         </a>
                     </div>
@@ -74,11 +74,11 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-100 py-6 text-center text-sm text-gray-500 space-y-1">
-                <p>Copyright © {currentYear} tumer – All Rights Reserved.</p>
+                <p>Copyright © {currentYear} ZSCircle – All Rights Reserved.</p>
                 <p>
                     Developed by{" "}
                     <a href="https://synoize.vercel.app" target="_blank" rel="noopener noreferrer" className="font-medium text-gray-700 hover:text-special-red">
-                        Team #KS
+                        Team Synoize
                     </a>
                 </p>
             </div>
